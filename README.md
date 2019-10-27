@@ -11,8 +11,8 @@ Instructor: Pinai
     - Using: Nexys A7 - 100T
 
 ## Running Vivado
-  Note: may require escalated priviledges.
-  Run:
+  Note: may require escalated priviledges.  
+  Run:  
   `source /tools/Xilinx/Vivado/2018.3/settings64.sh && vivado`   
   
   OR   
