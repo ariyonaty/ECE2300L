@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/alpha/Desktop/PosEdgeDFF/Nexys-A7-100T-Master-PosEdge.xdc rfile:../../../../../../Desktop/PosEdgeDFF/Nexys-A7-100T-Master-PosEdge.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/alpha/Documents/FPGA/PosEdgeDFF/Nexys-A7-100T-Master-PosEdge.xdc rfile:../../../Nexys-A7-100T-Master-PosEdge.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets clk_IBUF]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
