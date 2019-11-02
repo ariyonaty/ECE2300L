@@ -1,8 +1,0 @@
-0.6
-2018.3
-Dec  6 2018
-23:39:36
-/home/alpha/Documents/FPGA/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-/home/alpha/Documents/FPGA/project_1/project_1.srcs/sim_1/new/Full_Adder_Sim.v,1571565650,verilog,,,,Full_Adder_Sim,,,,,,,,
-/home/alpha/Documents/FPGA/project_1/project_1.srcs/sources_1/new/Full_Adder_4bit.v,1571565815,verilog,,/home/alpha/Documents/FPGA/project_1/project_1.srcs/sources_1/new/Full_Adder_Bit.v,,Full_Adder_4bit,,,,,,,,
-/home/alpha/Documents/FPGA/project_1/project_1.srcs/sources_1/new/Full_Adder_Bit.v,1571565165,verilog,,/home/alpha/Documents/FPGA/project_1/project_1.srcs/sim_1/new/Full_Adder_Sim.v,,Full_Adder_Bit,,,,,,,,
