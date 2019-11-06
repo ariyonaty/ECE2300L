@@ -39,14 +39,14 @@ module TFF(
 endmodule
 
 module counter_4bit_up(
-    input       clk, 
-    output   [3:0] Q
+    input       btn, 
+    output   [3:0] led
     );
        
 //  TFF     (T,   clk,    Q);  
-    TFF u0  (1,   clk, Q[0]);
-    TFF u1  (1, ~Q[0], Q[1]);
-    TFF u2  (1, ~Q[1], Q[2]);
-    TFF u3  (1, ~Q[2], Q[3]);
+    TFF u0  (1,     btn, led[0]);
+    TFF u1  (1, ~led[0], led[1]);
+    TFF u2  (1, ~led[1], led[2]);
+    TFF u3  (1, ~led[2], led[3]);
     
 endmodule

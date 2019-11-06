@@ -1,12 +1,12 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Nov  5 16:25:17 2019
+| Date         : Tue Nov  5 19:53:03 2019
 | Host         : alpha running 64-bit Ubuntu 18.04.3 LTS
-| Command      : report_control_sets -verbose -file button_counter_control_sets_placed.rpt
-| Design       : button_counter
+| Command      : report_control_sets -verbose -file counter_4bit_up_control_sets_placed.rpt
+| Design       : counter_4bit_up
 | Device       : xc7a100t
--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 
 Control Set Information
 
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     1 |
-| Unused register locations in slices containing registers |     4 |
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |    28 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      4 |            1 |
+|      1 |            4 |
 +--------+--------------+
 
 
@@ -44,7 +44,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            1 |
+| No           | No                    | No                     |               4 |            4 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -59,7 +59,10 @@ Table of Contents
 +----------------+---------------+------------------+------------------+----------------+
 |  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +----------------+---------------+------------------+------------------+----------------+
-|  btn_IBUF_BUFG |               |                  |                1 |              4 |
+| ~u0/led[0]     |               |                  |                1 |              1 |
+| ~u1/led[0]     |               |                  |                1 |              1 |
+|  btn_IBUF_BUFG |               |                  |                1 |              1 |
+| ~u2/led[0]     |               |                  |                1 |              1 |
 +----------------+---------------+------------------+------------------+----------------+
 
 

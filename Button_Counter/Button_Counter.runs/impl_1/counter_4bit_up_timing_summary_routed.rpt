@@ -1,13 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Nov  5 16:25:42 2019
+| Date         : Tue Nov  5 19:53:28 2019
 | Host         : alpha running 64-bit Ubuntu 18.04.3 LTS
-| Command      : report_timing_summary -max_paths 10 -file button_counter_timing_summary_routed.rpt -pb button_counter_timing_summary_routed.pb -rpx button_counter_timing_summary_routed.rpx -warn_on_violation
-| Design       : button_counter
+| Command      : report_timing_summary -max_paths 10 -file counter_4bit_up_timing_summary_routed.rpt -pb counter_4bit_up_timing_summary_routed.pb -rpx counter_4bit_up_timing_summary_routed.rpx -warn_on_violation
+| Design       : counter_4bit_up
 | Device       : 7a100t-csg324
 | Speed File   : -1  PRODUCTION 1.23 2018-06-13
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Timing Summary Report
 
@@ -52,7 +52,13 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 4 register/latch pins with no clock driven by root clock pin: btn (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: btn (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: u0/Q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: u1/Q_reg/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: u2/Q_reg/Q (HIGH)
 
 
 2. checking constant_clock

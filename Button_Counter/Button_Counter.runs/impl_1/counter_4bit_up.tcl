@@ -60,11 +60,13 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF31AA}}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -73,9 +75,9 @@ set rc [catch {
   set_property parent.project_path /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.xpr [current_project]
   set_property ip_output_repo /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.runs/synth_1/button_counter.dcp
+  add_files -quiet /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.runs/synth_1/counter_4bit_up.dcp
   read_xdc /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.srcs/constrs_1/imports/Button_Counter/Nexys-A7-100T-Master-Counter.xdc
-  link_design -top button_counter -part xc7a100tcsg324-1
+  link_design -top counter_4bit_up -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -91,8 +93,8 @@ set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
   opt_design 
-  write_checkpoint -force button_counter_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file button_counter_drc_opted.rpt -pb button_counter_drc_opted.pb -rpx button_counter_drc_opted.rpx"
+  write_checkpoint -force counter_4bit_up_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file counter_4bit_up_drc_opted.rpt -pb counter_4bit_up_drc_opted.pb -rpx counter_4bit_up_drc_opted.rpx"
   close_msg_db -file opt_design.pb
 } RESULT]
 if {$rc} {
@@ -111,10 +113,10 @@ set rc [catch {
     implement_debug_core 
   } 
   place_design 
-  write_checkpoint -force button_counter_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file button_counter_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file button_counter_utilization_placed.rpt -pb button_counter_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file button_counter_control_sets_placed.rpt"
+  write_checkpoint -force counter_4bit_up_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file counter_4bit_up_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file counter_4bit_up_utilization_placed.rpt -pb counter_4bit_up_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file counter_4bit_up_control_sets_placed.rpt"
   close_msg_db -file place_design.pb
 } RESULT]
 if {$rc} {
@@ -130,19 +132,19 @@ set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
   route_design 
-  write_checkpoint -force button_counter_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file button_counter_drc_routed.rpt -pb button_counter_drc_routed.pb -rpx button_counter_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file button_counter_methodology_drc_routed.rpt -pb button_counter_methodology_drc_routed.pb -rpx button_counter_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file button_counter_power_routed.rpt -pb button_counter_power_summary_routed.pb -rpx button_counter_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file button_counter_route_status.rpt -pb button_counter_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file button_counter_timing_summary_routed.rpt -pb button_counter_timing_summary_routed.pb -rpx button_counter_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file button_counter_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file button_counter_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file button_counter_bus_skew_routed.rpt -pb button_counter_bus_skew_routed.pb -rpx button_counter_bus_skew_routed.rpx"
+  write_checkpoint -force counter_4bit_up_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file counter_4bit_up_drc_routed.rpt -pb counter_4bit_up_drc_routed.pb -rpx counter_4bit_up_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file counter_4bit_up_methodology_drc_routed.rpt -pb counter_4bit_up_methodology_drc_routed.pb -rpx counter_4bit_up_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file counter_4bit_up_power_routed.rpt -pb counter_4bit_up_power_summary_routed.pb -rpx counter_4bit_up_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file counter_4bit_up_route_status.rpt -pb counter_4bit_up_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file counter_4bit_up_timing_summary_routed.rpt -pb counter_4bit_up_timing_summary_routed.pb -rpx counter_4bit_up_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file counter_4bit_up_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file counter_4bit_up_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file counter_4bit_up_bus_skew_routed.rpt -pb counter_4bit_up_bus_skew_routed.pb -rpx counter_4bit_up_bus_skew_routed.rpx"
   close_msg_db -file route_design.pb
 } RESULT]
 if {$rc} {
-  write_checkpoint -force button_counter_routed_error.dcp
+  write_checkpoint -force counter_4bit_up_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {
@@ -154,10 +156,10 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  catch { write_mem_info -force button_counter.mmi }
-  write_bitstream -force button_counter.bit 
-  catch {write_debug_probes -quiet -force button_counter}
-  catch {file copy -force button_counter.ltx debug_nets.ltx}
+  catch { write_mem_info -force counter_4bit_up.mmi }
+  write_bitstream -force counter_4bit_up.bit 
+  catch {write_debug_probes -quiet -force counter_4bit_up}
+  catch {file copy -force counter_4bit_up.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {

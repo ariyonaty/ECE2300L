@@ -1,14 +1,14 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Nov  5 16:25:42 2019
+| Date         : Tue Nov  5 19:53:28 2019
 | Host         : alpha running 64-bit Ubuntu 18.04.3 LTS
-| Command      : report_methodology -file button_counter_methodology_drc_routed.rpt -pb button_counter_methodology_drc_routed.pb -rpx button_counter_methodology_drc_routed.rpx
-| Design       : button_counter
+| Command      : report_methodology -file counter_4bit_up_methodology_drc_routed.rpt -pb counter_4bit_up_methodology_drc_routed.pb -rpx counter_4bit_up_methodology_drc_routed.rpx
+| Design       : counter_4bit_up
 | Device       : xc7a100tcsg324-1
 | Speed File   : -1
 | Design State : Fully Routed
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Report Methodology
 
@@ -34,22 +34,22 @@ Table of Contents
 -----------------
 TIMING-17#1 Warning
 Non-clocked sequential cell  
-The clock pin led_reg[0]/C is not reached by a timing clock
+The clock pin u0/Q_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Warning
 Non-clocked sequential cell  
-The clock pin led_reg[1]/C is not reached by a timing clock
+The clock pin u1/Q_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Warning
 Non-clocked sequential cell  
-The clock pin led_reg[2]/C is not reached by a timing clock
+The clock pin u2/Q_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#4 Warning
 Non-clocked sequential cell  
-The clock pin led_reg[3]/C is not reached by a timing clock
+The clock pin u3/Q_reg/C is not reached by a timing clock
 Related violations: <none>
 
 

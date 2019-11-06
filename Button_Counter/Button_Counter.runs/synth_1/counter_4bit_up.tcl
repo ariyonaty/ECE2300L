@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292ABF31AA}}  -suppress 
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -29,7 +31,7 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
 set_property ip_output_repo /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.srcs/sources_1/new/button_counter.v
+read_verilog -library xil_defaultlib /home/alpha/Documents/FPGA/Button_Counter/Button_Counter.srcs/sources_1/imports/new/TFF.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -44,12 +46,12 @@ set_property used_in_implementation false [get_files /home/alpha/Documents/FPGA/
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top button_counter -part xc7a100tcsg324-1
+synth_design -top counter_4bit_up -part xc7a100tcsg324-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef button_counter.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file button_counter_utilization_synth.rpt -pb button_counter_utilization_synth.pb"
+write_checkpoint -force -noxdef counter_4bit_up.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file counter_4bit_up_utilization_synth.rpt -pb counter_4bit_up_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
