@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1573022072">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1573165390">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-DRC" Name="slowerClockGen.drc"/>
-  <File Type="BG-BGN" Name="slowerClockGen.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="slowerClockGen.sysdef"/>
+  <File Type="BG-DRC" Name="counter_4bit_up.drc"/>
+  <File Type="BG-BGN" Name="counter_4bit_up.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="counter_4bit_up.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="slowerClockGen.ltx"/>
-  <File Type="BITSTR-MMI" Name="slowerClockGen.mmi"/>
-  <File Type="BITSTR-BMM" Name="slowerClockGen_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="slowerClockGen.nky"/>
-  <File Type="BITSTR-RBT" Name="slowerClockGen.rbt"/>
-  <File Type="BITSTR-MSK" Name="slowerClockGen.msk"/>
-  <File Type="BG-BIN" Name="slowerClockGen.bin"/>
-  <File Type="BG-BIT" Name="slowerClockGen.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="slowerClockGen_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="slowerClockGen_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="slowerClockGen_bus_skew_postroute_physopted.rpt"/>
-  <File Type="RDI-RDI" Name="slowerClockGen.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="slowerClockGen_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="slowerClockGen_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="slowerClockGen_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="slowerClockGen_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="slowerClockGen_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="slowerClockGen_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="slowerClockGen_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="slowerClockGen_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="slowerClockGen_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="slowerClockGen_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="slowerClockGen_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="slowerClockGen_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="slowerClockGen_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="slowerClockGen_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="slowerClockGen_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="slowerClockGen_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="slowerClockGen_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="slowerClockGen_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="slowerClockGen_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="slowerClockGen_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="slowerClockGen_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="slowerClockGen_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="slowerClockGen_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="slowerClockGen_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="slowerClockGen_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="slowerClockGen_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="slowerClockGen_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="slowerClockGen_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="slowerClockGen_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="slowerClockGen_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="slowerClockGen_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="slowerClockGen_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="slowerClockGen_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="slowerClockGen_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="slowerClockGen_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="slowerClockGen_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="slowerClockGen_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="slowerClockGen_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="slowerClockGen_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="slowerClockGen_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="slowerClockGen_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="slowerClockGen_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="slowerClockGen_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="slowerClockGen.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="slowerClockGen_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="slowerClockGen_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="slowerClockGen_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="slowerClockGen_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="slowerClockGen_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="slowerClockGen_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="slowerClockGen_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="slowerClockGen.tcl"/>
+  <File Type="BITSTR-LTX" Name="counter_4bit_up.ltx"/>
+  <File Type="BITSTR-MMI" Name="counter_4bit_up.mmi"/>
+  <File Type="BITSTR-BMM" Name="counter_4bit_up_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="counter_4bit_up.nky"/>
+  <File Type="BITSTR-RBT" Name="counter_4bit_up.rbt"/>
+  <File Type="BITSTR-MSK" Name="counter_4bit_up.msk"/>
+  <File Type="BG-BIN" Name="counter_4bit_up.bin"/>
+  <File Type="BG-BIT" Name="counter_4bit_up.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="counter_4bit_up_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="counter_4bit_up_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="counter_4bit_up_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="counter_4bit_up.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="counter_4bit_up_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="counter_4bit_up_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="counter_4bit_up_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="counter_4bit_up_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="counter_4bit_up_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="counter_4bit_up_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="counter_4bit_up_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="counter_4bit_up_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="counter_4bit_up_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="counter_4bit_up_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="counter_4bit_up_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="counter_4bit_up_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="counter_4bit_up_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="counter_4bit_up_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="counter_4bit_up_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="counter_4bit_up_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="counter_4bit_up_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="counter_4bit_up_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="counter_4bit_up_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="counter_4bit_up_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="counter_4bit_up_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="counter_4bit_up_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="counter_4bit_up_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="counter_4bit_up_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="counter_4bit_up_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="counter_4bit_up_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="counter_4bit_up_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="counter_4bit_up_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="counter_4bit_up_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="counter_4bit_up_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="counter_4bit_up_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="counter_4bit_up_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="counter_4bit_up_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="counter_4bit_up_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="counter_4bit_up_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="counter_4bit_up_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="counter_4bit_up_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="counter_4bit_up_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="counter_4bit_up_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="counter_4bit_up_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="counter_4bit_up_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="counter_4bit_up_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="counter_4bit_up_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="counter_4bit_up.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="counter_4bit_up_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="counter_4bit_up_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="counter_4bit_up_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="counter_4bit_up_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="counter_4bit_up_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="counter_4bit_up_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="counter_4bit_up_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="counter_4bit_up.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/slowerClockGen.v">
@@ -80,7 +80,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="slowerClockGen"/>
+      <Option Name="TopModule" Val="counter_4bit_up"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -105,9 +105,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

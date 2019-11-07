@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log slowerClockGen.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source slowerClockGen.tcl
+EAStep vivado -log counter_4bit_up.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter_4bit_up.tcl

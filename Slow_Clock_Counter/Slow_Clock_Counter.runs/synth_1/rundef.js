@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log slowerClockGen.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source slowerClockGen.tcl" );
+         "-log counter_4bit_up.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source counter_4bit_up.tcl" );
 
 
 

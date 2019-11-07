@@ -29,7 +29,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log slowerClockGen.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source slowerClockGen.tcl -notrace" );
+         "-log counter_4bit_up.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source counter_4bit_up.tcl -notrace" );
 
 
 
