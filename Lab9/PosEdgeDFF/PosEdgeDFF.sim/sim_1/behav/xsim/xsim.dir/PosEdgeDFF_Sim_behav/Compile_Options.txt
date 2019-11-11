@@ -1,0 +1,1 @@
+-wto "09138d1fe7944e0bae7561273afa04a2" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "PosEdgeDFF_Sim_behav" "xil_defaultlib.PosEdgeDFF_Sim" "xil_defaultlib.glbl" -log "elaborate.log" 
