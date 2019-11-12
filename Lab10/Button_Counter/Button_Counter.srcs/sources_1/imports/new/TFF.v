@@ -20,33 +20,20 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module TFF(
-    input       T,
-    input       clk,
-    output reg  Q
-    );
+module TFF(T, clk, Q);
+
+    input       T;
+    input       clk;
+    output reg  Q;
  
-    initial Q = 0;
+    initial Q = 4'b0000;
     
     always @ (posedge clk) begin
- 
         if (T) begin
             Q <= ~Q;
         end
-    
     end
     
 endmodule
 
-module counter_4bit_up(
-    input       btn, 
-    output   [3:0] led
-    );
-       
-//  TFF     (T,   clk,    Q);  
-    TFF u0  (1,     btn, led[0]);
-    TFF u1  (1, ~led[0], led[1]);
-    TFF u2  (1, ~led[1], led[2]);
-    TFF u3  (1, ~led[2], led[3]);
-    
-endmodule
+

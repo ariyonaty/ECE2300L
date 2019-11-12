@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Divide_by_Two(
-    input       clk,
-    output reg  Q
-    );
+module Divide_by_Two(clk, Q);
+    
+    input       clk;
+    output reg  Q;
     
     initial Q = 1;
     

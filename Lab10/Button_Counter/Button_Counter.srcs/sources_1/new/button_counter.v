@@ -20,15 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module button_counter(
-    input       btn,
-    output reg  [3:0] led
-    );
-        
-    initial led = 0;
-    
-    always @ (posedge btn) begin
-        led = led + 1;
-    end
+module button_counter(btn, led);
+
+    input       btn;
+    output      [3:0] led;
+       
+//  TFF     (T,   clk,    Q);  
+    TFF u0  (1,     btn, led[0]);
+    TFF u1  (1, ~led[0], led[1]);
+    TFF u2  (1, ~led[1], led[2]);
+    TFF u3  (1, ~led[2], led[3]);
  
 endmodule

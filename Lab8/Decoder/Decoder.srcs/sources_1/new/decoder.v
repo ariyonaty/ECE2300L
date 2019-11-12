@@ -20,28 +20,26 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module decoder(
-    input C, B, A,
-    input G1, G2A, G2B,
-    output reg [7:0] Y
-    );
+module decoder(C, B, A, G1, G2A, G2B, Y);
     
+    input C, B, A;
+    input G1, G2A, G2B;
+    output reg [7:0] Y; 
     
-wire en = G1 & ~G2A & ~G2B;
+    wire en = G1 & ~G2A & ~G2B;
 
-always @ (*)
-begin
-    if (en) begin
-        Y[0] = ~(~C & ~B & ~A);
-        Y[1] = ~(~C & ~B & A);
-        Y[2] = ~(~C & B & ~A);
-        Y[3] = ~(~C & B & A);
-        Y[4] = ~(C & ~B & ~A);
-        Y[5] = ~(C & ~B & A);
-        Y[6] = ~(C & B & ~A);
-        Y[7] = ~(C & B & A);  
-    end else begin 
-        Y = 8'b1111_1111;
-    end 
-end
+    always @ (*) begin
+        if (en) begin
+            Y[0] = ~(~C & ~B & ~A);
+            Y[1] = ~(~C & ~B & A);
+            Y[2] = ~(~C & B & ~A);
+            Y[3] = ~(~C & B & A);
+            Y[4] = ~(C & ~B & ~A);
+            Y[5] = ~(C & ~B & A);
+            Y[6] = ~(C & B & ~A);
+            Y[7] = ~(C & B & A);  
+        end else begin 
+            Y = 8'b1111_1111;
+        end 
+    end
 endmodule

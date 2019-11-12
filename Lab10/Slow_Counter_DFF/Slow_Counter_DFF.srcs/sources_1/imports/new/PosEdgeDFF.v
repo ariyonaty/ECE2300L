@@ -20,17 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module DFF(
-    input       D,
-    input       clk,
-    output reg  Q
-    );
-    
-    
-    always @ (posedge clk) begin
-        Q <= D;
-    end
-endmodule
+
 
 module counter_4bit_up(
     input       clk,
@@ -46,20 +36,4 @@ module counter_4bit_up(
     DFF u2  (~Q[2],          ~Q[1],     Q[2]);
     DFF u3  (~Q[3],          ~Q[2],     Q[3]);
     
-endmodule
-
-module slowerClockGen(
-    input       clk,
-    output reg  clkSlow
-    );
-    
-    reg [26:0] counter;
-    
-    always @ (posedge clk) begin
-        counter = counter + 1;
-        if (counter == 50_000_000) begin
-            clkSlow = ~ clkSlow;
-            counter = 0;
-        end
-    end
 endmodule

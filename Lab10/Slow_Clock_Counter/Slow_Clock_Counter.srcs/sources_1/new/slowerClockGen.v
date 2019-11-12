@@ -19,30 +19,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module TFF(
-    input       T,
-    input       clk,
-    output reg  Q
-    );
- 
-    initial Q = 0;
-    
-    always @ (posedge clk) begin
-        if (T) begin
-            Q <= ~Q;
-        end
-    end
-endmodule
-
-
 module counter_4bit_up(
     input       clk,
     output      [3:0] Q
     );
     
     wire clkSlow;
-    slowerClockGen(clk, clkSlow);
+    clock_gen(clk, clkSlow);
               
 //  TFF     (T,   clk,    Q);  
     TFF u0  (1,clkSlow, Q[0]);
@@ -53,18 +36,4 @@ module counter_4bit_up(
 endmodule
 
 
-module slowerClockGen(
-    input       clk,
-    output reg  clkSlow
-    );
-    
-    reg [26:0] counter;
-    
-    always @ (posedge clk) begin
-        counter = counter + 1;
-        if (counter == 50_000_000) begin
-            clkSlow = ~ clkSlow;
-            counter = 0;
-        end
-    end
-endmodule
+

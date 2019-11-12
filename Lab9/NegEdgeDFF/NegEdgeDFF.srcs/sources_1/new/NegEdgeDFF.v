@@ -19,12 +19,11 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module NegEdgeDFF(
-    input       D,
-    input       clk,
-    output reg  Qm,
-    output reg  Qs
-    );
+module NegEdgeDFF(D, clk, Qm, Qs);
+    input       D;
+    input       clk;
+    output reg  Qm;
+    output reg  Qs;
     
     always @ (D or clk) begin
         if (clk)

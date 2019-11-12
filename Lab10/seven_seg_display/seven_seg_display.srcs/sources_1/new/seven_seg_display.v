@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module seven_seg_display(
+module seven_seg_display(SW, seg);
+
     input       [3:0] SW,
     output reg  [6:0] seg
-    );
         
     always @ (SW) begin
         case (SW)
@@ -45,5 +45,6 @@ module seven_seg_display(
             4'b1111 :   seg = ~(7'h71);     // 15 
         endcase
     end
+
 endmodule       
      
