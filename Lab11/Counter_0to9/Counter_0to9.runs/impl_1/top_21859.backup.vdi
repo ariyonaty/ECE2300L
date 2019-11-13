@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Nov 11 20:43:49 2019
+# Process ID: 21859
+# Current directory: /home/alpha/Documents/FPGA/Lab11/Counter_0to9/Counter_0to9.runs/impl_1
+# Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: /home/alpha/Documents/FPGA/Lab11/Counter_0to9/Counter_0to9.runs/impl_1/top.vdi
+# Journal file: /home/alpha/Documents/FPGA/Lab11/Counter_0to9/Counter_0to9.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+
+*** Halting run - EA reset detected ***
+
+
+
+    while executing
+"start_step init_design"
+    (file "top.tcl" line 64)
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 11 20:43:55 2019...

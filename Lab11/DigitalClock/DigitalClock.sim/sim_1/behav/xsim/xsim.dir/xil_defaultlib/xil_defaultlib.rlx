@@ -1,0 +1,7 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sim_1/new/clock_gen_sim.v,1573601204,verilog,,,,clock_gen_sim,,,,,,,,
+/home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/imports/new/clock_gen.v,1573601274,verilog,,/home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sim_1/new/clock_gen_sim.v,,clock_gen,,,,,,,,
