@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module seven_seg_decoder(SW, seg);
-    input       [3:0] SW;
+module seven_seg_decoder(in, seg);
+    input       [3:0] in;
     output reg  [6:0] seg;
     
         
-    always @ (SW) begin
-        case (SW)
+    always @ (in) begin
+        case (in)
             4'b0000 :   seg = ~(7'h3f);     // 0
             4'b0001 :   seg = ~(7'h06);     // 1 
             4'b0010 :   seg = ~(7'h5b);     // 2 
