@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -37,8 +36,6 @@ read_verilog -library xil_defaultlib {
   /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/new/counter_0to5.v
   /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/new/counter_0to9.v
   /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/new/counter_2bit.v
-  /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/new/counter_4bit5.v
-  /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/new/counter_4bit9.v
   /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/new/decoder_2to4.v
   /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/new/detect_59.v
   /home/alpha/Documents/FPGA/Lab11/DigitalClock/DigitalClock.srcs/sources_1/imports/new/mux_4to1.v

@@ -29,7 +29,7 @@ module clock_gen1(clk_in, clk_out);
     
     always @ (posedge clk_in) begin
         counter = counter + 1;
-        if (counter == 50_000_000) begin
+        if (counter == 200) begin
             clk_out = ~ clk_out;
             counter = 0;
         end

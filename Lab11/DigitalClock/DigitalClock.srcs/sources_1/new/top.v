@@ -37,11 +37,11 @@ module top(clk100, sw1, sw2, sw3, led, seg, an);
     wire clk_en3;
     wire cout1;
     wire cout2;
+    wire eq59;
     wire [3:0] data0;
     wire [3:0] data1;
     wire [3:0] data2;
     wire [3:0] data3;
-    wire eq59;
     wire [3:0] data_out;
     
     //                          (clkin,     clkout);

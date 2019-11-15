@@ -20,13 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module counter_0to5(clk, en, cnt);
+module counter_0to5(clk, en, Q);
 
     input       clk;
     input       en;
-    output      [3:0] cnt;
-        
-    //                          (clk,   clk_en, Q)
-    counter_4bit5       c1      (clk,  en,     cnt);
+    output reg  [3:0] Q;
+       
+    
+    always @ (posedge clk) begin
+        if (en == 1) begin
+            if (Q == 5) Q = 0;
+            else Q = Q + 1;
+        end
+    end
     
 endmodule

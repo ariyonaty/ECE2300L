@@ -20,15 +20,22 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module counter_0to9(clk, en, cout, cnt);
+module counter_0to9(clk, en, cout, Q);
 
     input       clk;
     input       en;
     output      cout;
-    output      [3:0] cnt;
+    output reg  [3:0] Q;
        
-    //                          (clk,   clk_en, carry_out,  Q)
-    counter_4bit9       c1      (clk,  en,     cout,        cnt);
+    initial  Q = 0;
     
+    assign cout = (Q == 9);
+    
+    always @ (posedge clk) begin
+        if (en == 1) begin
+            if (Q == 9) Q = 0;
+            else Q = Q + 1;
+        end
+    end
 
 endmodule

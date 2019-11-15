@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Nov 12 18:42:55 2019
+| Date             : Thu Nov 14 23:20:19 2019
 | Host             : alpha running 64-bit Ubuntu 18.04.3 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      174 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       42 |     63400 |            0.07 |
+| Slice Logic    |    <0.001 |      169 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       40 |     63400 |            0.06 |
 |   CARRY4       |    <0.001 |       28 |     15850 |            0.18 |
-|   Register     |    <0.001 |       76 |    126800 |            0.06 |
+|   Register     |    <0.001 |       74 |    126800 |            0.06 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       12 |       --- |             --- |
+|   Others       |     0.000 |       11 |       --- |             --- |
 | Signals        |    <0.001 |      189 |       --- |             --- |
 | I/O            |     0.029 |       20 |       210 |            9.52 |
 | Static Power   |     0.097 |          |           |                 |
