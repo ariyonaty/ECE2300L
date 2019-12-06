@@ -60,23 +60,24 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param chipscope.maxJobs 2
   set_param xicom.use_bs_reader 1
-  create_project -in_memory -part xc7a100tcsg324-1
-  set_property board_part digilentinc.com:nexys-a7-100t:part0:1.0 [current_project]
+  create_project -in_memory -part xc7a100tcsg324-3
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/alpha/Documents/FPGA/Final/VendingMachine/VendingMachine.cache/wt [current_project]
-  set_property parent.project_path /home/alpha/Documents/FPGA/Final/VendingMachine/VendingMachine.xpr [current_project]
-  set_property ip_output_repo /home/alpha/Documents/FPGA/Final/VendingMachine/VendingMachine.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/sazuckerman/Desktop/VendingMachine/VendingMachine.cache/wt [current_project]
+  set_property parent.project_path C:/Users/sazuckerman/Desktop/VendingMachine/VendingMachine.xpr [current_project]
+  set_property ip_output_repo C:/Users/sazuckerman/Desktop/VendingMachine/VendingMachine.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/alpha/Documents/FPGA/Final/VendingMachine/VendingMachine.runs/synth_1/top.dcp
-  read_xdc /home/alpha/Documents/FPGA/Final/VendingMachine/VendingMachine.srcs/constrs_1/imports/FPGA/Nexys-A7-100T-Master.xdc
-  link_design -top top -part xc7a100tcsg324-1
+  add_files -quiet C:/Users/sazuckerman/Desktop/VendingMachine/VendingMachine.runs/synth_1/top.dcp
+  read_xdc C:/Users/sazuckerman/Desktop/VendingMachine/VendingMachine.srcs/constrs_1/imports/FPGA/Nexys-A7-100T-Master.xdc
+  link_design -top top -part xc7a100tcsg324-3
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -123,6 +124,22 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step phys_opt_design
+set ACTIVE_STEP phys_opt_design
+set rc [catch {
+  create_msg_db phys_opt_design.pb
+  phys_opt_design 
+  write_checkpoint -force top_physopt.dcp
+  close_msg_db -file phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step phys_opt_design
   unset ACTIVE_STEP 
 }
 
