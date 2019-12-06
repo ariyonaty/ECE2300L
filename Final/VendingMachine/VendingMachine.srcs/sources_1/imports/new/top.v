@@ -35,13 +35,13 @@ module top(clk, reset, money_in, sw_in, out, dispense, state, clk_beat);
     wire clk_1hz;
     wire clk_out;
     
-//                  (clk_in,    clk_out)
+	//              (clk_in,    clk_out)
     clock_gen   g1  (clk,       clk_1hz);     
     
-//                  (clk_in,    clk_out)
+	//              (clk_in,    clk_out)
     divide4     d1  (clk_1hz,   clk_out);
     
-//                  clk,        reset,  money_in,   in,     out, dispense,  state);
+	//              (clk,       reset,  money_in,   in,     out, dispense,  state);
     machine     m1  (clk_out,   reset,  money_in,   sw_in,  out, dispense,  state);
 
     assign  clk_beat = clk_out;

@@ -50,13 +50,13 @@ module seq_detect(seq_in, clk, reset, state, out);
     always @ (*)    
         case (state)
             S0: if (seq_in) next_state <= S1;  else next_state <= S0;
-            S1: if (seq_in) next_state <= S0;  else next_state <= S2;
-            S2: if (seq_in) next_state <= S0;  else next_state <= S3;
+            S1: if (seq_in) next_state <= S1;  else next_state <= S2;
+            S2: if (seq_in) next_state <= S1;  else next_state <= S3;
             S3: if (seq_in) next_state <= S4;  else next_state <= S0;
             S4: if (seq_in) next_state <= S1;  else next_state <= S5;
             S5: if (seq_in) next_state <= S6;  else next_state <= S3;
             S6: if (seq_in) next_state <= S7;  else next_state <= S2;
-            S7: if (seq_in) next_state <= S0;  else next_state <= S8;
+            S7: if (seq_in) next_state <= S1;  else next_state <= S8;
             S8: if (seq_in) next_state <= S0;  else next_state <= S3; 
             default: next_state <= S0;
         endcase        

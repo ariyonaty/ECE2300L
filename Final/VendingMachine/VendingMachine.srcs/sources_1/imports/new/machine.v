@@ -45,16 +45,9 @@ module machine(clk, reset, money_in, in, out, dispense, state);
     always @ (posedge clk or posedge reset) begin
         if (reset == 1) begin
             state <= S0;
-//            next_state <= S0;
-        end
-        else state <= next_state; // Move forward the queue
+        end else state <= next_state; // Move forward the queue
     end
-    
-//    always @ (posedge reset) begin // Completely clear the queue
-//        next_state <= S0;
-//        state <= S0;
-//    end
-    
+
     always @ (*) begin                                                                                             
         case (state)                                                                                                         
             S0:     if          ((in == 2'b00) || (money_in==0))    begin   next_state <= S0;   end 
@@ -65,14 +58,19 @@ module machine(clk, reset, money_in, in, out, dispense, state);
             S1:     if          ((in == 2'b00) || (money_in==0))    begin   next_state <= S1;   end 
                     else if     ((in == 2'b01) && (money_in==1))    begin   next_state <= S0;   end 
                     else if     ((in == 2'b10) && (money_in==1))    begin   next_state <= S3;   end 
-                    else if     ((in == 2'b11) && (money_in==1))    begin   next_state <= S6;   end 
-            S3:                                                         begin   next_state <= S0;   end 
-            S5:                                                         begin   next_state <= S5a;  end 
-            S5a:                                                        begin   next_state <= S0;   end 
-            S6:                                                         begin   next_state <= S6a;  end 
-            S6a:                                                        begin   next_state <= S6b;  end 
-            S6b:                                                        begin   next_state <= S0;   end 
-            default:                                                    begin   next_state <= S0;   end                
+                    else if     ((in == 2'b11) && (money_in==1))    begin   next_state <= S6;   end
+ 
+            S3:                                                     begin   next_state <= S0;   end 
+
+            S5:                                                     begin   next_state <= S5a;  end 
+            S5a:                                                    begin   next_state <= S0;   end 
+
+            S6:                                                     begin   next_state <= S6a;  end 
+            S6a:                                                    begin   next_state <= S6b;  end 
+            S6b:                                                    begin   next_state <= S0;   end 
+
+            default:                                                begin   next_state <= S0;   end                
+
         endcase
     end
     
@@ -88,13 +86,16 @@ module machine(clk, reset, money_in, in, out, dispense, state);
                     else if     ((in == 2'b10) && (money_in==1))    begin   out = 2'b01;   dispense = 1'b0 ; end 
                     else if     ((in == 2'b11) && (money_in==1))    begin   out = 2'b01;   dispense = 1'b0 ; end 
                     
-            S3:                                                         begin   out = 2'b00;   dispense = 1'b1 ; end 
-            S5:                                                         begin   out = 2'b01;   dispense = 1'b0 ; end 
-            S5a:                                                        begin   out = 2'b00;   dispense = 1'b1 ; end 
-            S6:                                                         begin   out = 2'b10;   dispense = 1'b0 ; end 
-            S6a:                                                        begin   out = 2'b01;   dispense = 1'b0 ; end 
-            S6b:                                                        begin   out = 2'b00;   dispense = 1'b1 ; end 
-            default:                                                    begin   out = 2'b00;   dispense = 1'b0 ; end          
+            S3:                                                     begin   out = 2'b00;   dispense = 1'b1 ; end 
+            
+			S5:                                                     begin   out = 2'b01;   dispense = 1'b0 ; end 
+            S5a:                                                    begin   out = 2'b00;   dispense = 1'b1 ; end 
+
+            S6:                                                     begin   out = 2'b10;   dispense = 1'b0 ; end 
+            S6a:                                                    begin   out = 2'b01;   dispense = 1'b0 ; end 
+            S6b:                                                    begin   out = 2'b00;   dispense = 1'b1 ; end 
+
+            default:                                                begin   out = 2'b00;   dispense = 1'b0 ; end          
   
         endcase          
     end

@@ -35,10 +35,7 @@ module top(clk, pb_sw, sw, led, out, clk_out);
 
     clock_gen   g1  (clk,   clk_1hz);
     
-//                  in,     clk,        reset,  state,  out
-//    pattern     p1  (sw,    clk_1hz,    pb_sw,  led,    out);
-
-//                  (seq_in,    clk,    reset,  state,  out)
+	//              (seq_in,    clk,    reset,  state,  out)
     seq_detect  d1  (sw,    clk_1hz,    pb_sw,  led,    out); 
 
 endmodule
